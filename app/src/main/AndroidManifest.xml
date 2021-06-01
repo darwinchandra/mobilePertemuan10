@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pertemuan11">
+    <permission android:name="com.example.pertemuan11.provider.READ_URI_DB"
+        android:protectionLevel="normal"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pertemuan11">
+        <activity android:name="com.example.pertemuan11.pre_load"></activity>
+        <activity android:name="com.example.pertemuan11.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="com.example.pertemuan11.provider.provider.myContentProvider"
+            android:name=".provider.myContentProvider"
+            android:exported="true"
+            android:enabled="true"
+            android:readPermission="com.example.pertemuan11.provider.READ_URI_DB"
+            android:grantUriPermissions="true"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,3 @@
+rootProject.name = "Pertemuan11"
+include ':app'
+include ':app2'
